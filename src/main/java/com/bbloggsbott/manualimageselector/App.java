@@ -6,6 +6,6 @@ package com.bbloggsbott.manual_image_selector;
 public class App {
 
     public static void main(String[] args) {
-
+        System.out.println("Hello");
     }
 }
