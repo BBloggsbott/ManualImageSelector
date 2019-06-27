@@ -32,7 +32,7 @@ public class MainFrame extends JFrame {
         deleteButton.addActionListener(e -> deleteCurrentImage());
     }
 
-    MainFrame(String originalImageDir, String segmentedImageDir, String segmentedImageSuffix){
+    public MainFrame(String originalImageDir, String segmentedImageDir, String segmentedImageSuffix){
         this(originalImageDir, segmentedImageDir);
         this.segmentedImageSuffix = segmentedImageSuffix;
     }
