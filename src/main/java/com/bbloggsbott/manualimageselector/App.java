@@ -6,10 +6,11 @@ package com.bbloggsbott.manualimageselector;
 import com.bbloggsbott.manualimageselector.presentation.MainFrame;
 
 import javax.swing.*;
+import java.io.IOException;
 
 public class App {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         String segmentedImageDir="", segmentedImageSuffix="", originalImageDir="";
         JFileChooser fc = new JFileChooser();
         fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
