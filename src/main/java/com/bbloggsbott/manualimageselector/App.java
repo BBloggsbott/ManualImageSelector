@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class App {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         String segmentedImageDir="", segmentedImageSuffix="", originalImageDir="";
         JFileChooser fc = new JFileChooser();
         fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
@@ -28,6 +28,11 @@ public class App {
 
         segmentedImageSuffix = MainFrame.getSegmentedImageSuffix();
 
-        new MainFrame(originalImageDir, segmentedImageDir, segmentedImageSuffix);
+        try{
+            new MainFrame(originalImageDir, segmentedImageDir, segmentedImageSuffix);
+        } catch (IOException ioe){
+            ioe.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Could not load image", "IOException", JOptionPane.ERROR_MESSAGE);
+        }
     }
 }
